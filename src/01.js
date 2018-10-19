@@ -4,7 +4,7 @@ const csjs = require('csjs-inject');
 const morphdom = require('morphdom');
 
 const INFURA_API_KEY = 'YOUR_INFURA_API_KEY';
-const web3 = new Web3(Web3.givenProvider || `https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+const web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
 
 const css = csjs `
   .box {
@@ -43,7 +43,8 @@ const resultElement = html `<div></div>`
 
 function queryBalance(event) {
   web3.eth.getBalance(inputAccount.value, (err, balance) => {
-    let number = Math.round(web3.utils.fromWei(balance, 'ether') * 100) / 100;
+    // let number = Math.round(web3.utils.fromWei(balance, 'ether') * 100) / 100;
+    let number = web3.utils.fromWei(balance, 'ether');
     const newElement = html `<div class="${css.result}">結果：${number} Ether</div>`
     morphdom(resultElement, newElement);
   });
