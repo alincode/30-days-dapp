@@ -1,0 +1,32 @@
+{
+  "name": "30-days-dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "budo src/01.js:bundle.js --live --open --dir ./static",
+    "build1": "browserify src/01.js > static/01.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alincode/30-days-dapp.git"
+  },
+  "keywords": [],
+  "author": "alincode <alincode@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alincode/30-days-dapp/issues"
+  },
+  "homepage": "https://github.com/alincode/30-days-dapp#readme",
+  "dependencies": {
+    "bel": "^6.0.0",
+    "csjs-inject": "^1.0.1",
+    "morphdom": "^2.3.3",
+    "nanohtml": "^1.2.6",
+    "web3": "^1.0.0-beta.36"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "budo": "^11.5.0"
+  }
+}
