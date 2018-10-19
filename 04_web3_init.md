@@ -112,11 +112,13 @@ browserify src/01.js > static/01.js
 
 <https://alincode.github.io/30-days-dapp/static/01.html>
 
-畫面一
-![](assets/04_demo_before.png)
+![](assets/04_demo.png)
 
-畫面二
-![](assets/04_demo_after.png)
+對照 etherscan
+
+<https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d>
+
+![](assets/04_etherscan.png)
 
 ### 範例
 
