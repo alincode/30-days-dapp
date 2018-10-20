@@ -53,70 +53,13 @@ web3.setProvider(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/
 const web3 = new Web3(web3.currentProvider);
 ```
 
-<!-- TODO: web3.givenProvider -->
-
 ## 實戰練習：查詢帳戶餘額 DApp
-
-雖然現在 `Vue.js`、`React.js`、`Angular.js` 非常熱門，但我不想選邊站，希望維持範例簡單清晰，所以我選用以下這些輕量化模組。
-
-### 輕量化模組
-
-#### nanohtml
-
-* <https://github.com/choojs/nanohtml>
-* 它是一個輕量級的 view engine
-
-#### morphdom
-
-* <https://github.com/patrick-steele-idem/morphdom>
-* 快速更新 DOM 的工具
-
-#### csjs-inject
-
-* <https://github.com/rtsao/csjs-inject>
-* 它把 `[CSJS](https://github.com/rtsao/csjs)` 模組重新包過，功能跟 `CSJS` 一樣，但使用起來比較簡便，可以將 CSS 注入到 DOM 中。
-
-#### budo
-
-* <https://github.com/mattdesl/budo>
-* 它是一個 browserify 開發用伺服器，專注於 Live reload (包括 CSS injection）和其他用於快速原型設計的功能。
-* 常用參數
-  * --open：開啟瀏覽器，預設 port 為 9966
-  * --live：啟動 LiveReload 模式，當 HTML、Javascript、CSS 有變動的時候自動更新頁面。
-  * --dir：指定公開的目錄 (public directory)
-
-```sh
-// 安裝 budo
-npm install budo -g
-
-// 開發用 live reload 模式
-budo src/01.js:bundle.js --live --open --dir ./static
-```
-
-#### browserify
-
-* <http://browserify.org/>
-* 模塊打包工具
-
-> 非必要，如果你沒打算發佈到網路上的話，可以只用 live reload 模式。
-
-```
-// 安裝 
-npm install browserify -g
-
-// 打包
-browserify src/01.js > static/01.js
-```
-
-### Demo
 
 <https://alincode.github.io/30-days-dapp/static/01.html>
 
 ![](assets/04_demo.png)
 
-對照 etherscan
-
-<https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d>
+對照 etherscan：<https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d>
 
 ![](assets/04_etherscan.png)
 
