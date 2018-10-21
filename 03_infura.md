@@ -1,18 +1,24 @@
 # 介紹 Infura
 
+前一篇我們有提到，`web3.js` 必須要搭配一個 `JSON-RPC Server` 來使用，如果只打算接觸前端 DApp 開發，可以直接註冊 [infura](<https://infura.io/>)，馬上就有專屬於你的連接位置。
+
+![](assets/03_infura.png)
+
+除此之外，你也可以考慮使用 [MetaMask](https://metamask.io/)，兩者選一個就可以了。
+
+![](assets/03_metamask.png)
+
 **Infura 是什麼？**
 
 它提供擴充性高的區塊鏈基礎建設，一個簡單容易使用的開發人員工具，提供安全、可靠、擴充性高的存取以太坊和 `IPFS`。讓你省去基礎建設的煩惱，更專注在開發 DApp。
 
 **Infura 的好處**
 
-* 讓你省去自己建立和管理以太坊客戶端
+讓你省去自己建立和管理以太坊客戶端
 
 ### 註冊 Infura 帳號
 
 **步驟一**：先前往首頁 <https://infura.io/>，然後按首頁右上角的 `SIGN UP` 按鈕，前往註冊頁面。
-
-![](assets/03_infura.png)
 
 **步驟二**：填入名字、電子郵件、密碼後，按 `SIGN UP` 按鈕，等待前往下一個頁面。
 

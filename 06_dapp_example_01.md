@@ -1,69 +1,15 @@
-# web3.js 初始化與查詢帳戶餘額 DApp 範例
+# 實戰練習：查詢帳戶餘額 DApp
 
-#### 安裝 web3.js
-
-方法一：使用 `NPM` 來安裝 `web3.js`
-
-```
-npm install --save web3
-```
-
-方法二：使用 CDN
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
-```
-
-方法三：從 [Github 下載](https://github.com/ethereum/web3.js) 打包好的`dist/web3.min.js` 檔案。
-
-#### provider (供應者)
-
-指向你要連接的 `JSON-RPC Server` 位置
-
-**為 web3 初始化 provider**
-
-```js
-// 引入模組
-const Web3 = require('web3');
-
-// HTTP provider
-const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
-
-// Socket provider
-const web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
-
-// IPC provider
-const net = require('net');
-const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net));
-```
-
-**更換 provider**
-
-```js
-web3.setProvider(new Web3.providers.HttpProvider('http://localhost:8545'));
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
-web3.setProvider(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net));
-```
-
-**currentProvider**
-
-常與 `MetaMask` 搭配使用
-
-```js
-const web3 = new Web3(web3.currentProvider);
-```
-
-## 實戰練習：查詢帳戶餘額 DApp
+![](assets/06_demo.png)
 
 <https://alincode.github.io/30-days-dapp/static/01.html>
 
-![](assets/04_demo.png)
+![](assets/06
+_etherscan.png)
 
 對照 etherscan：<https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d>
 
-![](assets/04_etherscan.png)
-
-### 範例
+### 原始碼
 
 static/index.html
 
@@ -79,16 +25,20 @@ static/index.html
 </html>
 ```
 
+src/01.js
+
 ```js
-// src/01.js
+// 匯入模組
 const Web3 = require('web3');
 const html = require('nanohtml');
 const csjs = require('csjs-inject');
 const morphdom = require('morphdom');
 
+// 初始化 web3.js
 const INFURA_API_KEY = 'your_infura_api_key';
 const web3 = new Web3(Web3.givenProvider || `https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
 
+// 設定 css inject
 const css = csjs `
   .box {
   }
@@ -131,6 +81,8 @@ function queryBalance(event) {
     morphdom(resultElement, newElement);
   });
 }
+
+// ===== render ===== 
 
 function render() {
   document.body.appendChild(html `
