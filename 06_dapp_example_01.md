@@ -4,8 +4,7 @@
 
 <https://alincode.github.io/30-days-dapp/static/01.html>
 
-![](assets/06
-_etherscan.png)
+![](assets/06_etherscan.png)
 
 對照 etherscan：<https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d>
 
