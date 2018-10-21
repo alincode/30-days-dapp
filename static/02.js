@@ -51464,9 +51464,6 @@ const html = require('nanohtml');
 const csjs = require('csjs-inject');
 const morphdom = require('morphdom');
 
-const INFURA_API_KEY = '7d833516a13649c29271308a0344a020';
-// const INFURA_API_KEY = 'YOUR_INFURA_API_KEY';
-
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
 } else {
@@ -51507,6 +51504,15 @@ function inputAccount(address) {
   return html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
 }
 
+// ===== utils =====
+function getNetworkName(networkId) {
+  if (networkId == 1) return "Main";
+  else if (networkId == 3) return "Ropsten";
+  else if (networkId == 42) return "Kovan";
+  else if (networkId == 4) return "Rinkeby";
+  else return "";
+}
+
 // ===== Event =====
 
 function queryBalance(event) {
@@ -51517,20 +51523,38 @@ function queryBalance(event) {
   });
 }
 
+// ===== Preload =====
+
 function start() {
+  console.log('=== start ===');
+  getNetworkId({
+    account: address
+  });
+}
+
+function getNetworkId(result) {
+  console.log('>>> 1');
+  web3.eth.net.getId(function (err, networkId) {
+    result.networkId = networkId;
+    getAccounts(result);
+  });
+}
+
+function getAccounts(result) {
+  console.log('>>> 2');
   web3.eth.getAccounts(function (err, addresses) {
     const address = addresses[0];
     web3.eth.defaultAccount = address;
-    render({
-      account: address
-    });
+    result.account = address;
+    render(result);
   });
 }
 
 function render(result) {
-  console.log('result:', result);
+  console.log('>>> result:', result);
   document.body.appendChild(html `
   <div class=${css.box} id="app">
+    ${getNetworkName(result.networkId)} Network<br>
     ${inputAccount(result.account)}
     <button class=${css.button} onclick=${queryBalance}>查詢 Ether 金額</button>
     ${resultElement}
