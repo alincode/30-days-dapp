@@ -51526,5 +51526,5 @@ function render() {
  `)
 }
 
-render();
+if (typeof web3 !== 'undefined') render();
 },{"csjs-inject":226,"morphdom":319,"nanohtml":322,"web3":421}]},{},[438]);
