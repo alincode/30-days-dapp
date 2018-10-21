@@ -51499,10 +51499,7 @@ const css = csjs `
 // ==== DOM element ===
 
 const resultElement = html `<div></div>`
-
-function inputAccount(address) {
-  return html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
-}
+const inputAccount = html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
 
 // ===== utils =====
 function getNetworkName(networkId) {
@@ -51553,7 +51550,7 @@ function render(result) {
   document.body.appendChild(html `
   <div class=${css.box} id="app">
     ${getNetworkName(result.networkId)} Network<br>
-    ${inputAccount(result.account)}
+    ${inputAccount}
     <button class=${css.button} onclick=${queryBalance}>查詢 Ether 金額</button>
     ${resultElement}
   </div>
