@@ -51470,7 +51470,7 @@ const INFURA_API_KEY = '7d833516a13649c29271308a0344a020';
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
 } else {
-  web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+  alert('initial failed');
 }
 
 const css = csjs `
