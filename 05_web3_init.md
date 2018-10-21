@@ -53,22 +53,14 @@ web3.setProvider(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/
 const web3 = new Web3(web3.currentProvider);
 ```
 
-## web3.eth
+### 常見用法
 
-**web3.eth.getBalance**
-
-查詢餘額
-
-
-語法
 ```js
-web3.eth.getBalance(address [, defaultBlock] [, callback])
-```
-
-範例
-```js
-const address = '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d';
-web3.eth.getBalance(address, (err, balance) => {
-  
-});
+let web3;
+if (typeof web3 !== 'undefined') {
+  web3 = new Web3(web3.currentProvider);
+} else {
+  const INFURA_API_KEY = 'your_infura_api_key';
+  web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+}
 ```

@@ -1,4 +1,30 @@
-# 實戰練習：查詢帳戶餘額 DApp
+# 實戰練習：查詢帳戶餘額 with infura
+
+**web3.eth.getBalance**
+
+查詢餘額
+
+語法
+```js
+web3.eth.getBalance(address [, defaultBlock] [, callback])
+```
+
+傳入值
+* address：帳號
+* defaultBlock：區塊編號
+
+回傳值
+* balance: 餘額
+
+範例
+```js
+const address = '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d';
+web3.eth.getBalance(address, (err, balance) => {
+  
+});
+```
+
+### Demo
 
 ![](assets/06_demo.png)
 
@@ -10,7 +36,7 @@
 
 ### 原始碼
 
-static/index.html
+static/01.html
 
 ```html
 <!doctype html>
@@ -19,7 +45,7 @@ static/index.html
   <meta charset="utf-8">
 </head>
 <body>
-  <script src="bundle.js"></script>
+  <script src="01.js"></script>
 </body>
 </html>
 ```
@@ -35,7 +61,7 @@ const morphdom = require('morphdom');
 
 // 初始化 web3.js
 const INFURA_API_KEY = 'your_infura_api_key';
-const web3 = new Web3(Web3.givenProvider || `https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+const web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
 
 // 設定 css inject
 const css = csjs `
