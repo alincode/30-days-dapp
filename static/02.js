@@ -51499,12 +51499,13 @@ const css = csjs `
   }
 `
 
-const address = '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d';
-
 // ==== DOM element ===
 
-const inputAccount = html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
 const resultElement = html `<div></div>`
+
+function inputAccount(address) {
+  return html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
+}
 
 // ===== Event =====
 
@@ -51516,15 +51517,26 @@ function queryBalance(event) {
   });
 }
 
-function render() {
+function start() {
+  web3.eth.getAccounts(function (err, addresses) {
+    const address = addresses[0];
+    web3.eth.defaultAccount = address;
+    render({
+      account: address
+    });
+  });
+}
+
+function render(result) {
+  console.log('result:', result);
   document.body.appendChild(html `
   <div class=${css.box} id="app">
-    ${inputAccount}
+    ${inputAccount(result.account)}
     <button class=${css.button} onclick=${queryBalance}>查詢 Ether 金額</button>
     ${resultElement}
   </div>
  `)
 }
 
-if (typeof web3 !== 'undefined') render();
+if (typeof web3 !== 'undefined') start();
 },{"csjs-inject":226,"morphdom":319,"nanohtml":322,"web3":421}]},{},[438]);
