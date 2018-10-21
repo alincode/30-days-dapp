@@ -51527,9 +51527,7 @@ function queryBalance(event) {
 
 function start() {
   console.log('=== start ===');
-  getNetworkId({
-    account: address
-  });
+  getNetworkId({});
 }
 
 function getNetworkId(result) {
