@@ -51499,7 +51499,7 @@ const css = csjs `
 // ==== DOM element ===
 
 const resultElement = html `<div></div>`
-const inputAccount = html `<input class=${css.input} type="text" value=${address} placeholder="輸入你要查詢的帳戶"/>`;
+const inputAccount = html `<input class=${css.input} type="text" value="" placeholder="輸入你要查詢的帳戶"/>`;
 
 // ===== utils =====
 function getNetworkName(networkId) {
