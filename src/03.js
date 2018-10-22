@@ -134,10 +134,10 @@ function getAccounts(result) {
 }
 
 function getKingInfo(result) {
+  console.log('>>> 3');
   myContract.methods.kingInfo().call((err, data) => {
     if (err) return console.error(err);
     if (data.amount != "0") {
-      console.log('>>>> 3333');
       const ether = web3.utils.fromWei(data.amount, "ether");
       const newElement = html `<div class="${css.result}">The king's name is ${data.name}, amount is ${ether} Ether</div>`
       morphdom(resultElement, newElement);
