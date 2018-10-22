@@ -1,0 +1,174 @@
+[{
+    "constant": true,
+    "inputs": [],
+    "name": "kingInfo",
+    "outputs": [{
+      "components": [{
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "createdAt",
+          "type": "uint256"
+        },
+        {
+          "name": "withdrawalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "",
+      "type": "tuple"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "available",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [{
+      "name": "_name",
+      "type": "string"
+    }],
+    "name": "replaceKing",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "playerWithdrawal",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "endAt",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "amount",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "startAt",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [{
+      "name": "",
+      "type": "address"
+    }],
+    "name": "kings",
+    "outputs": [{
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "createdAt",
+        "type": "uint256"
+      },
+      {
+        "name": "withdrawalAmount",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "ownerWithdrawal",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [{
+      "name": "afterFewDay",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": false,
+        "name": "addr",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "name": "NoticeNewKing",
+    "type": "event"
+  }
+]
