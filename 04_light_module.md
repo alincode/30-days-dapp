@@ -1,6 +1,6 @@
 # 前端輕量化模組
 
-雖然現在 `Vue.js`、`React.js`、`Angular.js`、`JQuery` 已經很普及，但我不想預設讀者已經會使用這些框架，為了維持範例簡單清晰，採用以下這些輕量化模組，大家只要 3 分鐘閱讀即可上手。
+雖然現在 `Vue.js`、`React.js`、`Angular.js`、`JQuery` 已經很普及，但我不想預設讀者已經會使用這些框架，為了維持範例簡單清晰，採用以下這些輕量化模組，大家只要花 3 分鐘閱讀，即可上手。
 
 * nanohtml
 * morphdom
@@ -79,9 +79,9 @@ const danger = html`<button class="${btn.danger}">Danger</button>`
 
 ### morphdom
 
-快速更新 DOM 的工具型模組
+快速更新 DOM 的工具型模組，可與 `nanohtml` 搭配使用。
 
-Github：<https://github.com/patrick-steele-idem/morphdom>
+專案網址：<https://github.com/patrick-steele-idem/morphdom>
 
 
 **更新元素**
@@ -100,7 +100,20 @@ morphdom(element, newElement)
 
 它把 `CSJS` 模組重新包過，功能跟 `CSJS` 一樣，但使用起來比較簡便，可以將 CSS 注入到 DOM 中。
 
-Github：<https://github.com/rtsao/csjs-inject>
+專案網址：<https://github.com/rtsao/csjs-inject>
+
+```js
+const css = csjs `
+  .input {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 500px;
+    font-size: 20px;
+  }
+`
+
+const inputName = html `<input class=${css.input} type="text" placeholder="input your name"/>`;
+```
 
 ### budo
 
@@ -119,11 +132,13 @@ npm install budo -g
 budo src/01.js:bundle.js --live --open --dir ./static
 ```
 
+![](assets/04_budo_live.png)
+
 ### browserify
 
 ![](https://raw.githubusercontent.com/browserify/browserify/HEAD/assets/logo.png)
 
-模塊打包工具
+模塊打包工具，可以讓瀏覽器使用 `require` 語法。
 
 官網：<http://browserify.org/>
 
@@ -135,4 +150,4 @@ npm install browserify -g
 browserify src/01.js > static/01.js
 ```
 
-> 非必要，如果你沒打算發佈到網路上的話，可以只用 live reload 模式，就不需要安裝 browserify。
+非必要，如果你沒打算發佈到網路上的話，可以只用 live reload 模式，可以不安裝 browserify。
