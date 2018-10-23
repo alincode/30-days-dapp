@@ -59,7 +59,7 @@ web3.eth.net.getId(function (err, networkId) {
 
 ![](assets/07_demo.png)
 
-<https://alincode.github.io/30-days-dapp/static/01.html>
+<https://alincode.github.io/30-days-dapp/static/02.html>
 
 ### 原始碼
 
