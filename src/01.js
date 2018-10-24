@@ -4,7 +4,7 @@ const csjs = require('csjs-inject');
 const morphdom = require('morphdom');
 
 const INFURA_API_KEY = 'YOUR_INFURA_API_KEY';
-const web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
 
 const css = csjs `
   .box {
