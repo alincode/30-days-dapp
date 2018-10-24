@@ -1,5 +1,15 @@
 # web3.js 初始化
 
+本系列文章用的是 `1.0.0-beta.36` 版，你可以透過以下指令查詢 `web3.js` 的版本。
+
+```
+web3.version
+```
+
+如果你有安裝 `MetaMask` 或位在 `DApp` 網頁，可以直接開啟瀏覽器的「開發人員工具」試試看。
+
+![](assets/05_console.png)
+
 ### 安裝 web3.js
 
 方法一：使用 `NPM` 來安裝 `web3.js`
@@ -50,13 +60,12 @@ web3.setProvider(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/
 常與 `MetaMask` 搭配使用
 
 ```js
-const web3 = new Web3(web3.currentProvider);
+web3 = new Web3(web3.currentProvider);
 ```
 
 ### 常見用法
 
 ```js
-let web3;
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
 } else {

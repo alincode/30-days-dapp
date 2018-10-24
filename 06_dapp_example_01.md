@@ -61,7 +61,7 @@ const morphdom = require('morphdom');
 
 // 初始化 web3.js
 const INFURA_API_KEY = 'your_infura_api_key';
-const web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
+web3 = new Web3(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`);
 
 // 設定 css inject
 const css = csjs `
