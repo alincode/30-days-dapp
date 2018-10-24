@@ -2,7 +2,6 @@ const Web3 = require('web3');
 const html = require('nanohtml');
 const csjs = require('csjs-inject');
 const morphdom = require('morphdom');
-const ABI = require('./abi.json');
 
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
@@ -10,6 +9,7 @@ if (typeof web3 !== 'undefined') {
   alert('initial failed');
 }
 
+const ABI = require('./abi.json');
 const DEFAULT_ADDRESS = '0x0c972a74a9806f249968720035ebda65b653360c';
 const contractAddress = localStorage.constract || DEFAULT_ADDRESS;
 const myContract = new web3.eth.Contract(ABI, contractAddress);
@@ -45,11 +45,11 @@ const css = csjs `
   }
 `
 
-// ==== DOM element ===
+// ===== DOM element =====
 
 const resultElement = html `<div></div>`
-const inputName = html `<input class=${css.input} type="text" value="" placeholder="input your name"/>`;
-const inputAmount = html `<input class=${css.input} type="number" value="" placeholder="input ether amount"/>`;
+const inputName = html `<input class=${css.input} type="text" placeholder="input your name"/>`;
+const inputAmount = html `<input class=${css.input} type="number" placeholder="input ether amount"/>`;
 
 // ===== utils =====
 function getNetworkName(networkId) {
@@ -60,7 +60,7 @@ function getNetworkName(networkId) {
   else return "";
 }
 
-// ===== watch log =====
+// ===== listening smart contract event =====
 
 // Generate filter options
 const options = {
@@ -84,7 +84,7 @@ myContract.events.NoticeNewKing(options, async (error, event) => {
   return
 })
 
-// ===== Event =====
+// ===== Click Event =====
 
 function replaceKing(event) {
   let account = web3.eth.defaultAccount;
