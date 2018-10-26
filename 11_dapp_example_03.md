@@ -129,4 +129,17 @@ function render(result) {
 if (typeof web3 !== 'undefined') start();
 ```
 
+### 輔助工具函示
+
+```js
+// ===== utils =====
+function getNetworkName(networkId) {
+  if (networkId == 1) return "Main";
+  else if (networkId == 3) return "Ropsten";
+  else if (networkId == 42) return "Kovan";
+  else if (networkId == 4) return "Rinkeby";
+  else return "";
+}
+```
+
 原始碼：<https://github.com/alincode/king-sandbox>
