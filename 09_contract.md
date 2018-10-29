@@ -1,4 +1,4 @@
-# 介紹 web3.eth.Contract (1/2)
+# 介紹 web3.eth.Contract - 建立合約實例與預設配置
 
 web3.eth.Contract 可以讓你輕鬆地跟以太坊區塊鏈上的智能合約互動。
 
@@ -12,13 +12,13 @@ new web3.eth.Contract(jsonInterface[, address][, options])
 
 **傳入參數**
 
-* jsonInterface 物件 : 合約的 json interface
-* address 字串 : 智能合約位址，也可以透過 `myContract.options.address = '0x1234..'` 語法設定。
-* options 物件
-  * from 字串
-  * gasPrice 字串
-  * gas 數字：等於同 gas limit
-  * data 字串
+* `jsonInterface` 物件 : 合約的 json interface
+* `address` 字串 : 智能合約位址，也可以透過 `myContract.options.address = '0x1234..'` 語法設定。
+* `options` 物件
+  * `from` 字串
+  * `gasPrice` 字串
+  * `gas` 數字：等於同 gas limit
+  * `data` 字串
 
 **回傳值**
 
@@ -37,22 +37,22 @@ var myContract = new web3.eth.Contract(
 );
 ```
 
-### 屬性 (Properties)
+### 預設配置
 
 ```
 myContract.options
 ```
 
-替建立合約的 transaction 做屬性設定
+替建立合約的 `transaction` 做屬性設定
 
 **屬性**
 
-* address 字串
-* jsonInterface 陣列
-* data 字串：合約的 byte code
-* from 字串
-* gasPrice 字串
-* gas 數字：等於 gas limit
+* `address` 字串
+* `jsonInterface` 陣列
+* `data` 字串：合約的 byte code
+* `from` 字串
+* `gasPrice` 字串
+* `gas` 數字：等於 gas limit
 
 **範例**
 
