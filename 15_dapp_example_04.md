@@ -3,6 +3,10 @@
 * Demo: <https://alincode.github.io/rinkeby-faucet/>
 * Github: <https://github.com/alincode/rinkeby-faucet>
 
+**截圖**
+
+![](assets/15_rinkeby-faucet.png)
+
 **index.html**
 
 ```html
