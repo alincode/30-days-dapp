@@ -40,13 +40,14 @@
 * 網站：<https://app.auctionity.com/>
 * 拍賣交易市場：可以允許使用者拍賣、競標加密資產 (crypto assets)。
 
-![](assets/auctionity.png)
+![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/auctionity.png)
 
 **Decentraland Marketplace**
 
 * 網站：<https://market.decentraland.org/>
 * 允許使用者買、賣和管理虛擬土地，然後可以在你賣的土地上透過它提供的函式庫，打照自己理想中的樣子。
 * Github：<https://github.com/decentraland/marketplace>
+* Youtube 教學影片：<https://www.youtube.com/watch?v=UIJ_dGOFjKM>
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=UIJ_dGOFjKM"><img src="https://img.youtube.com/vi/UIJ_dGOFjKM/0.jpg" alt="IMAGE ALT TEXT"></a>
@@ -58,7 +59,7 @@
 * 加密收藏品交易市場，可以客製化自己的市場
 * 文件：<https://docs.opensea.io/>
 
-![](assets/opensea.png)
+![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/opensea.png)
 
 **Rare Bits**
 

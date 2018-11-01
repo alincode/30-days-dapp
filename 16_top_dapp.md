@@ -4,6 +4,8 @@
 
 ![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_games.png)
 
+2018/10/31 從 <https://dappradar.com/> 截圖
+
 **Etheremon**
 
 * 網站：<https://www.etheremon.com/>
@@ -57,24 +59,6 @@
 **Bancor**
 
 * 網站：<https://www.bancor.network/>
-
-### collectibles
-
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_collectibles.png)
-
-### marketplaces
-
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_marketplaces.png)
-
-### 博弈
-
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_gambling.png)
-
-### 其他類
-
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_other.png)
-
-> 2018/10/31 截圖 https://dappradar.com/
 
 ### 參考資料
 
