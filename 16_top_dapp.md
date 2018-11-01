@@ -36,13 +36,16 @@
 * 網站：<https://play.0xuniverse.com/>
 * 讓玩家可以建造宇宙飛船，探索星係並殖民行星。可以購買，交易和出售。
 
-### 交易所
+### 去中心化交易所
 
 ![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_exchanges.png)
 
 **IDEX**
 
 * 網頁：<https://idex.market/>
+* 可以交易以太坊的 ERC20 代幣
+
+![](assets/idex.png)
 
 **ForkDelta**
 
@@ -55,10 +58,15 @@
 **LocalEthereum**
 
 * 網站：<https://localethereum.com/>
+* 交易爭議有仲裁人制度
+* 介紹影片：<https://www.youtube.com/watch?v=fuv0scTORZE>
 
 **Bancor**
 
 * 網站：<https://www.bancor.network/>
+* 新聞
+  * [IThome - 區塊鏈專案Bancor三小時募得1.5億美元，以太幣價格創新高](https://www.ithome.com.tw/news/114903)
+  * [INSIDE - 去中心化交易服務 Bancor 錢包遭駭！ 驚傳損失 24,984 顆以太幣](https://www.inside.com.tw/2018/07/11/bancor-hack-ethereum)
 
 ### 參考資料
 
