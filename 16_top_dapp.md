@@ -1,10 +1,9 @@
 # DApp 應用分析 (1/3)
 
-### 遊戲
+* [Dapp Store - Popular Decentralized Apps | DApp Store](https://dappstore.link/)
+* [DappRadar - Ranked list of blockchain dapps](https://dappradar.com/)
 
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_games.png)
-
-2018/10/31 從 <https://dappradar.com/> 截圖
+### 遊戲類
 
 **Etheremon**
 
@@ -38,14 +37,12 @@
 
 ### 去中心化交易所
 
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_exchanges.png)
-
 **IDEX**
 
 * 網頁：<https://idex.market/>
 * 可以交易以太坊的 ERC20 代幣
 
-![](assets/idex.png)
+![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/idex.png)
 
 **ForkDelta**
 
@@ -67,8 +64,3 @@
 * 新聞
   * [IThome - 區塊鏈專案Bancor三小時募得1.5億美元，以太幣價格創新高](https://www.ithome.com.tw/news/114903)
   * [INSIDE - 去中心化交易服務 Bancor 錢包遭駭！ 驚傳損失 24,984 顆以太幣](https://www.inside.com.tw/2018/07/11/bancor-hack-ethereum)
-
-### 參考資料
-
-* [【以太坊Dapps正夯？】來看看前五大的Dapp是何方神聖](https://www.blocktempo.com/the-top-5-ethereum-dapps-by-daily-active-users/)
-* [過去24小時內 透過以太坊Dapp交易的金額近1,400萬美元 - 區塊客](https://blockcast.it/2018/05/22/about-14-million-has-been-spent-on-eth-dapps-in-the-past-24-hours/)

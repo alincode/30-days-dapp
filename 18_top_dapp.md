@@ -22,8 +22,6 @@
 
 ### 其他類
 
-![](https://raw.githubusercontent.com/alincode/30-days-dapp/master/assets/16/top5_other.png)
-
 **Ethereum Name Service**
 
 * 查詢可註冊的名字：<https://registrar.ens.domains/>
