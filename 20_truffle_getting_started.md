@@ -1,4 +1,4 @@
-# 透過 Truffle 框架在測試環境發佈智能合約
+# 使用 Truffle 框架在測試環境發佈智能合約
 
 ```sh
 # 安裝 truffle
@@ -18,10 +18,46 @@ truffle init
 * migrations 目錄：存放發佈合約的 script
 * test 目錄：存放測試 script 的原始碼
 
-**四個檔案**
+跟四個檔案
 
 * contracts/Migrations.sol
+
+```js
+pragma solidity ^0.4.23;
+
+contract Migrations {
+  address public owner;
+  uint public last_completed_migration;
+
+  constructor() public {
+    owner = msg.sender;
+  }
+
+  modifier restricted() {
+    if (msg.sender == owner) _;
+  }
+
+  function setCompleted(uint completed) public restricted {
+    last_completed_migration = completed;
+  }
+
+  function upgrade(address new_address) public restricted {
+    Migrations upgraded = Migrations(new_address);
+    upgraded.setCompleted(last_completed_migration);
+  }
+}
+```
+
 * migrations/1_initial_migration.js
+
+```js
+var Migrations = artifacts.require("./Migrations.sol");
+
+module.exports = function(deployer) {
+  deployer.deploy(Migrations);
+};
+```
+
 * truffle-config.js
 * truffle.js：truffle 設定檔
 
@@ -59,9 +95,11 @@ module.exports = function (deployer) {
 # 編譯智能合約
 truffle compile
 
-# 啟動 truffle 的主控台
+# 啟動 truffle 的主控台，同時開啟 develop 模式。
 truffle develop
 ```
+
+> develop 模式：開發環境在啟動時自動創建十組帳號，資料僅暫時在記憶體中，程式關掉後資料就會消失。
 
 ![](assets/truffle/develop.png)
 
@@ -111,3 +149,41 @@ SimpleStorage.deployed()
      logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' },
   logs: [] }
 ```
+
+#### 與 Ganache 整合
+
+Step1: 下載 Ganache：<https://truffleframework.com/ganache>，並安裝。
+
+Step2: 設定 truffle.js 檔
+
+```js
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*"
+    }
+  }
+};
+```
+
+這裡的設定值是與 Ganache 對應
+
+![](assets/truffle/ganache.png)
+
+Step3: migrate 修改的設定
+
+```sh
+truffle migrate
+```
+
+![](assets/truffle/migrate2.png)
+
+Step4: 進入 truffle 的主控台
+
+```
+truffle console
+```
+
+![](assets/truffle/console.png)
