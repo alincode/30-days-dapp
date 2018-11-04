@@ -10,6 +10,7 @@ Truffle 是針對基於以太坊的 Solidity 語言的一套開發框架，內�
 
 * 官網：<http://truffleframework.com/>
 * Github：<https://github.com/trufflesuite/truffle>
+* 文件：<https://truffleframework.com/docs/truffle/overview>
 * 使用案例：
   * ENS：<https://github.com/ethereum/ens>
 
