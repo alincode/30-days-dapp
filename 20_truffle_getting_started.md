@@ -1,5 +1,7 @@
 # 使用 Truffle 框架在測試環境發佈智能合約
 
+#### 初始化專案
+
 ```sh
 # 安裝 truffle
 npm install -g truffle
@@ -152,9 +154,11 @@ SimpleStorage.deployed()
 
 #### 與 Ganache 整合
 
-Step1: 下載 Ganache：<https://truffleframework.com/ganache>，並安裝。
+**Step1: 安裝 Ganache**
 
-Step2: 設定 truffle.js 檔
+下載 Ganache：<https://truffleframework.com/ganache>，並安裝。
+
+**Step2: 設定 truffle.js 檔**
 
 ```js
 module.exports = {
@@ -172,7 +176,7 @@ module.exports = {
 
 ![](assets/truffle/ganache.png)
 
-Step3: migrate 修改的設定
+**Step3: migrate 修改的設定**
 
 ```sh
 truffle migrate
@@ -180,10 +184,12 @@ truffle migrate
 
 ![](assets/truffle/migrate2.png)
 
-Step4: 進入 truffle 的主控台
+**Step4: 進入 truffle 的主控台**
 
 ```
 truffle console
 ```
 
 ![](assets/truffle/console.png)
+
+完整原始碼：<https://github.com/alincode/simple-storage>
