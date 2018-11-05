@@ -1,4 +1,4 @@
-# 在 Truffle 除錯
+# 在 Truffle 上除錯
 
 <!-- ### 無限循環 -->
 
@@ -54,6 +54,8 @@ debug 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
 會開啟 debug 模式逐行執行。
 
 ![](assets/truffle/debug.png)
+
+原始碼：<https://github.com/alincode/simple-storage-debugging>
 
 <!-- ### 無效的錯誤檢查 -->
 <!-- ### 沒有錯誤，但功能未按預期運行 -->
