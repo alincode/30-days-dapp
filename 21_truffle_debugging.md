@@ -55,6 +55,8 @@ debug 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
 
 ![](assets/truffle/debug.png)
 
+輸入 `n` 或按 `enter` 會跳到下一行，輸入 `q` 是退出 debug 模式。
+
 原始碼：<https://github.com/alincode/simple-storage-debugging>
 
 <!-- ### 無效的錯誤檢查 -->
