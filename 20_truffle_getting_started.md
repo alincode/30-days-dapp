@@ -154,6 +154,8 @@ SimpleStorage.deployed()
 
 #### 與 Ganache 整合
 
+Ganache 是一個可以使用於以太坊區塊鏈的圖形化工具，支援 Windows、Mac 和 Linux 作業系統。功能有部署智能合約、運行測試等等，前身是叫 `TestRPC`。
+
 **Step1: 安裝 Ganache**
 
 下載 Ganache：<https://truffleframework.com/ganache>，並安裝。
