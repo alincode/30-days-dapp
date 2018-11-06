@@ -1,8 +1,8 @@
-# Truffle 樣板
+# Truffle 樣版
 
 Truffle Boxes：<https://truffleframework.org/boxes/>
 
-`Box` 是提供別人寫好的 `Truffle` 的樣板 (blueprint)，讓你可以快速開始開發 `DApp`。
+`Box` 是提供別人寫好的 `Truffle` 的樣版 (blueprint)，讓你可以快速開始開發 `DApp`。
 
 **安裝 truffle**
 
@@ -10,7 +10,7 @@ Truffle Boxes：<https://truffleframework.org/boxes/>
 npm install -g truffle
 ```
 
-輸入你要的樣板名稱，這邊使用的是 `unbox`。
+輸入你要的樣版名稱，這邊使用的是 `unbox`。
 
 ```sh
 # 語法：truffle unbox [box-name]
@@ -59,9 +59,9 @@ npm start
 npm run build
 ```
 
-### 熱門的樣板
+### 熱門的樣版
 
-**官方提供的樣板**
+**官方提供的樣版**
 
 * drizzle
   * 內建 react.js 基礎建設
@@ -71,11 +71,11 @@ npm run build
 * react-auth
   * Github：<https://github.com/truffle-box/react-auth-box>
 
-你可以從這裡找到更多官方提供的樣板：<https://github.com/truffle-box>
+你可以從這裡找到更多官方提供的樣版：<https://github.com/truffle-box>
 
 <!-- * devcon4：<https://github.com/truffle-box/devcon4-box> -->
 
-**社群提供的熱門樣板**
+**社群提供的熱門樣版**
 
 * adrianmcli/truffle-next
   * 內建 next.js：<https://github.com/zeit/next.js/> 基礎建設
