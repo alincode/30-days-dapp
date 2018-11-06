@@ -190,6 +190,7 @@ truffle migrate
 
 ```
 truffle console
+migrate ––reset ––compile-all
 ```
 
 ![](assets/truffle/console.png)

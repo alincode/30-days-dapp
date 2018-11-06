@@ -1,8 +1,8 @@
 # Truffle 樣版
 
-Truffle Boxes：<https://truffleframework.org/boxes/>
+`Box` 是別人提供寫好的 `Truffle` 的樣版 (blueprint)，讓你可以快速開始開發 `DApp`。
 
-`Box` 是提供別人寫好的 `Truffle` 的樣版 (blueprint)，讓你可以快速開始開發 `DApp`。
+> Truffle Boxes：<https://truffleframework.org/boxes/>
 
 **安裝 truffle**
 
