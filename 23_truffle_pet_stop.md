@@ -1,6 +1,6 @@
-# Truffle - 使用寵物商店樣版快速開發 DApp (1/2)
+# Truffle - 使用寵物商店樣版快速開發 DApp (1/3)
 
-### Step 1：建立專案基礎建設
+#### Step 1：建立專案基礎建設
 
 ```sh
 # 建立一個資料夾
@@ -10,7 +10,7 @@ mkdir truffle-pet-shop-sandbox
 truffle unbox pet-shop
 ```
 
-### Step 2：安裝 DApp 相依模組並啟動 DApp
+#### Step 2：安裝 DApp 相依模組並啟動 DApp
 
 ```sh
 # 安裝必要套件
@@ -23,38 +23,38 @@ npm run dev
 ![](assets/truffle/pet_store_dapp.png)
 
 
-### Step3：新增一個領養的智能合約
+#### Step3：新增一個領養的智能合約
+
+```sh
+truffle create contract Adoption
+```
 
 ```js
 pragma solidity ^0.4.17;
 
 contract Adoption {
-
-  mapping(uint8 => address) public adopterMap;
+  address[16] public adopters;
   
-  modifier vaildPetId(uint8 petId) {
+  modifier validAdoptId(uint petId) {
       require(petId >= 0 && petId < 16);
       _;
   }
-  
+
   // 領養
-  function adopt(uint8 petId) public returns (uint8) {
-    adopterMap[petId] = msg.sender;
+  function adopt(uint petId) validAdoptId(petId) public returns (uint) {
+    adopters[petId] = msg.sender;
     return petId;
   }
 
-  // 取得領養人的位址
-  function getAdopters() public view returns (address[]) {
-    address[] storage adopters;
-    for(uint8 i = 0; i < 16; i++) {
-        adopters.push(adopterMap[i]);
-    }
+  function getAdopters() public view returns (address[16]) {
     return adopters;
   }
 }
 ```
 
-### Step4：新增一個發佈智能合約的 script
+#### Step4：新增一個發佈智能合約的 script
+
+在 `migrations` 資料夾裡新增一個 `2_deploy_contracts.js` 檔案
 
 ```js
 // 這裡的名稱要對應到智能合約
@@ -65,20 +65,25 @@ module.exports = function (deployer) {
 };
 ```
 
-### Step5：開啟測試鏈
+#### Step5：開啟測試鏈
 
 開啟 Ganache
 
 ![](assets/truffle/ganache_accounts.png)
 
-### Step6：發布智能合約
+#### Step6：發布智能合約
+
+Solidity 是編譯型語言，所以發佈前要先編譯過。
 
 ```sh
 # 編譯
 truffle compile
 
-# 發佈
+# 編譯並部署
 truffle migrate
+
+# 重新部署
+truffle migrate --reset
 ```
 
 ![](assets/truffle/pet_store_migrate.png)
