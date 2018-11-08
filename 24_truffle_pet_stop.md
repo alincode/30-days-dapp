@@ -1,6 +1,4 @@
-# Truffle - 使用寵物商店樣版快速開發 DApp (2/3)
-
-[一步步教你開發、部署第一個去中心化應用 - 寵物商店](https://hk.saowen.com/a/ed08b75e8c3ec28bd39160d4294b5d21bbbd5e84cb61956879f47b159abf91bc)
+# 使用寵物商店樣版快速開發 DApp (2/3)
 
 #### Step7: 新增一個用 Solidity 語言的測試程式
 
@@ -27,7 +25,7 @@ contract TestAdoption {
 uint returnedId = instance.adopt(8);
 ```
 
-驗證結果，第一個參數是實際回傳的值，第二個參數是期望的值，第三個參數值是錯誤訊息提示。
+驗證結果，第一個參數是實際回傳的值，第二個參數是期望的值，第三個參數值是錯誤提示。
 
 ```
 Assert.equal(returnedId, expected, "debug Message");
