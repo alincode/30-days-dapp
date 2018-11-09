@@ -1,6 +1,6 @@
 # 使用寵物商店樣版快速開發 DApp (2/3)
 
-#### Step7: 新增一個用 Solidity 語言的測試程式
+#### Step 7: 新增一個用 Solidity 語言的測試程式
 
 測試程式要放在 `test` 的資料夾內，除了副檔名是 `.js`、`.es`、`.es6`、`.jsx` 和 `.sol` 的檔案之外，測試執行時會被忽略。
 
@@ -68,7 +68,7 @@ contract TestAdoption {
 }
 ```
 
-#### Step8: 執行測試
+#### Step 8: 執行測試
 
 ```sh
 # 執行所有測試
@@ -80,7 +80,7 @@ truffle test ./test/TestAdoption.sol
 
 ![](assets/truffle/pet_store_test.png)
 
-#### Step9: 新增一個用 Javascript 語言的測試程式
+#### Step 9: 新增一個用 Javascript 語言的測試程式
 
 truffle 的 `javascript` 是使用 `mocha` 跟 `chai` 模組，但要把 `describe()` 語法換成 `contract()` 語法。
 
@@ -112,7 +112,7 @@ var Adoption = artifacts.require("Adoption");
 
 > `artifacts.require()` 文件：<https://truffleframework.com/docs/truffle/getting-started/running-migrations#artifacts-require->
 
-#### Step10: 自訂測試邏輯
+#### Step 10: 自訂測試邏輯
 
 在測試裡內建一個 `web3` 實例，所以你可以直接使用 `web3.eth.getBalance` 語法，也支援 async/await 語法。
 
@@ -127,7 +127,7 @@ contract('Adoption', async (accounts) => {
 });
 ```
 
-#### Step11：執行 javascript 測試
+執行 javascript 測試
 
 ```sh
 truffle test ./test/adoption.js
