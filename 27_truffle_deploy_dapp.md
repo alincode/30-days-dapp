@@ -2,10 +2,10 @@
 
 因為我們要發佈的 DApp 比較單純，不需要太多的編譯跟打包，所以只使用一些小模組就可以完成。如果你需要複雜的步驟，就需要考慮用 `webpack` 來打包。
 
+> webpack：<https://webpack.js.org/>
+
 * recursive-copy：是複製檔案模組
 * gh-pages：是 github page 模組
-
-> webpack：<https://webpack.js.org/>
 
 **Step 1：安裝模組**
 
@@ -39,8 +39,31 @@ init();
   "test": "truffle test"
 },
 ```
+**Step 4：修正路徑問題**
 
-**Step 4：執行部署**
+`src/js/app.js` 搬到 `src/app.js`
+
+編輯 `src/app.js`
+
+```js
+從
+$.getJSON('../pets.json', function (data) {
+
+改為
+$.getJSON('pets.json', function (data) {
+```
+
+編輯 `src/index.html`
+
+```html
+從
+<script src="js/app.js"></script>
+
+改為
+<script src="app.js"></script>
+```
+
+**Step 5：執行部署**
 
 ```sh
 npm run build
@@ -49,7 +72,7 @@ npm run deploy
 
 線上 Demo：<https://alincode.github.io/truffle-pet-shop-sandbox/>
 
-**Step 5：確認 Github Page 的設定**
+**Step 6：確認 Github Page 的設定**
 
 ![](assets/truffle/github_setting.png)
 
