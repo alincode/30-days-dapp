@@ -1,4 +1,4 @@
-# Truffle 與 Infura 整合
+# Truffle 與 Infura 整合快速部署
 
 **Step 1：安裝模組 truffle-hdwallet-provider**
 
@@ -50,12 +50,14 @@ module.exports = {
 **Step 4：設定環境變數**
 
 ```sh
-# 助記詞(mnemonic)
+# 助記詞
 export MNEMONIC="....."
 
 # INFURA 的 API KEY
 export INFURA_API_KEY="..."
 ```
+
+> 在當你 MetaMask 註冊以太坊帳號的時候，當時你就會拿到一組助記詞(mnemonic)。
 
 **Step 5：智能合約部署至 ropsten 網路**
 
