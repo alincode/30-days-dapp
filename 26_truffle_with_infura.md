@@ -1,10 +1,12 @@
-# Truffle 與 Infura 整合快速部署智能合約｀
+# Truffle 與 Infura 整合來快速部署智能合約
 
 **Step 1：安裝模組 truffle-hdwallet-provider**
 
 ```sh
 npm i truffle-hdwallet-provider --save
 ```
+
+> truffle-hdwallet-provider 文件：<https://github.com/trufflesuite/truffle-hdwallet-provider>
 
 **Step 2：匯入模組**
 

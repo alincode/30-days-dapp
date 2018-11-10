@@ -1,7 +1,11 @@
 # DApp 發佈到 Github Page
 
+因為我們要發佈的 DApp 比較單純，不需要太多的編譯跟打包，所以只使用一些小模組就可以完成。如果你需要複雜的步驟，就需要考慮用 `webpack` 來打包。
+
 * recursive-copy：是複製檔案模組
 * gh-pages：是 github page 模組
+
+> webpack：<https://webpack.js.org/>
 
 **Step 1：安裝模組**
 
