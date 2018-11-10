@@ -1,4 +1,4 @@
-# Truffle 與 Infura 整合快速部署
+# Truffle 與 Infura 整合快速部署智能合約｀
 
 **Step 1：安裝模組 truffle-hdwallet-provider**
 
@@ -73,7 +73,9 @@ truffle migrate --network ropsten
 
 ![](assets/truffle/migrate_ropsten.png)
 
-不相信的話，你可以把它複製到 etherscan ropsten <https://ropsten.etherscan.io/> 再次確認。
+不相信的話，你可以把它複製到 etherscan ropsten 再次確認。
+
+> etherscan ropsten：<https://ropsten.etherscan.io/>
 
 ![](assets/truffle/etherscan_ropsten_search.png)
 
