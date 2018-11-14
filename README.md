@@ -1,4 +1,4 @@
-# 30 天挑戰：DApp 開發 - 使用 web3.js 
+# 30 天挑戰：DApp 開發 - 使用 Web3.js 
 
 **目錄**
 
@@ -8,11 +8,27 @@
 * [Day04: 前端輕量化模組](https://ithelp.ithome.com.tw/articles/10203211)
 * [Day05: web3.js 初始化](https://ithelp.ithome.com.tw/articles/10203431)
 * [Day06: 實戰練習「查詢帳戶餘額 with infura」](https://ithelp.ithome.com.tw/articles/10203805)
-* [Day07: 實戰練習 「查詢帳戶餘額 with MetaMask」](https://ithelp.ithome.com.tw/articles/10203977)
-
-
-### Mise
-
-<https://github.com/ethjs/ethjs>
-<https://github.com/ethers-io/ether.js>
-<https://github.com/ethereum/web3.js/tree/master/example>
+* [Day07: 實戰練習「查詢帳戶餘額 with MetaMask」](https://ithelp.ithome.com.tw/articles/10203977)
+* [Day08: 實戰練習「簡易版 King of the Ether (1/3)」](https://ithelp.ithome.com.tw/articles/10204490)
+* [Day09: 介紹 web3.eth.Contract 建立合約實例與預設配置](https://ithelp.ithome.com.tw/articles/10204775)
+* [Day10: 實戰練習 「簡易版 King of the Ether (2/3)」](https://ithelp.ithome.com.tw/articles/10204942)
+* [Day11: 實戰練習 「簡易版 King of the Ether (3/3)」](https://ithelp.ithome.com.tw/articles/10205279)
+* [Day12: 介紹 web3.eth.Contract - Methods](https://ithelp.ithome.com.tw/articles/10205757)
+* [Day13: 介紹 web3.eth.Contract 事件](https://ithelp.ithome.com.tw/articles/10206097)
+* [Day14: 常用網路與工具函示](https://ithelp.ithome.com.tw/articles/10206408)
+* [Day15: 實戰練習「Rinkeby Faucet」](https://ithelp.ithome.com.tw/articles/10206580)
+* [Day16: DApp 應用分析 (1/3)](https://ithelp.ithome.com.tw/articles/10207053)
+* [Day17: DApp 應用分析 (2/3)](https://ithelp.ithome.com.tw/articles/10207349)
+* [Day18: DApp 應用分析 (3/3)](https://ithelp.ithome.com.tw/articles/10207563)
+* [Day19: DApp 開發框架](https://ithelp.ithome.com.tw/articles/10207743)
+* [Day20: 使用 Truffle 框架在測試環境發佈智能合約](https://ithelp.ithome.com.tw/articles/10207926)
+* [Day21: 在 Truffle 上除錯](https://ithelp.ithome.com.tw/articles/10208293)
+* [Day22: Truffle 樣版](https://ithelp.ithome.com.tw/articles/10208448)
+* [Day23: 使用寵物商店樣版快速開發 DApp (1/3)](https://ithelp.ithome.com.tw/articles/10208673)
+* [Day24: 使用寵物商店樣版快速開發 DApp (2/3)](https://ithelp.ithome.com.tw/articles/10208838)
+* [Day25: 使用寵物商店樣版快速開發 DApp (3/3)](https://ithelp.ithome.com.tw/articles/10209054)
+* [Day26: Truffle 與 Infura 整合來快速部署智能合約](https://ithelp.ithome.com.tw/articles/10209235)
+* [Day27: DApp 發佈到 Github Page](https://ithelp.ithome.com.tw/articles/10209285)
+* [Day28: 將 DApp 發佈到 IPFS](https://ithelp.ithome.com.tw/articles/10209569)
+* [Day29: 自製 DApp Starter Kit](https://ithelp.ithome.com.tw/articles/10209754)
+* [Day30: 總結](https://ithelp.ithome.com.tw/articles/10209895)
